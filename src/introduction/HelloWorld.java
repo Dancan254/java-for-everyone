@@ -3,8 +3,9 @@ package introduction;
 public class HelloWorld {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        System.out.println("Hello again");
-        System.out.println("Hello again and again");
+        for (int i = 0; i < 7; i++) {
+            //i -> 0 -> increment it i =1
+            System.out.println(i);
+        }
     }
 }
