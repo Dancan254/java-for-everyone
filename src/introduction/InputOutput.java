@@ -12,6 +12,7 @@ public class InputOutput {
         // What is your name
         //-input comes in the next line - ln. creates a new line -> Ian
         System.out.print("HI, what is your name? ");
+        //HI, what is your name? Ian - the input is done in the same line
         String name = input.next();
         System.out.println("Nice to meet you, " + name + ".");
 
@@ -25,7 +26,6 @@ public class InputOutput {
 
         int sum = num1 + num2;
         System.out.println("You entered " + num1 + " and " + num2 + ", so the sum is " + sum);
-        //HI, what is your name? Ian
 
         System.out.println("Trying some fishy stuff");
         System.out.println("Enter a number: ");
