@@ -36,6 +36,10 @@ public class InputOutput {
 
         System.out.println("Fishy number: " + fishy);
         System.out.println("Fishy string: " + fishyString);
+
+        System.out.println("What is your name: ");
+        String name2 = input.nextLine();
+        System.out.println("Nice to meet you, " + name2 + ".");
         input.close();
     }
 }
