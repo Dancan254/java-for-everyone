@@ -1,4 +1,4 @@
-package introduction;
+package introduction.strings;
 
 public class Strings {
     public static void main(String[] args) {
