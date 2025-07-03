@@ -49,5 +49,11 @@ public class Strings {
         System.out.println("string1 " + System.identityHashCode(string1));
         System.out.println(string1.equals(string2)); // true
         System.out.println("string2 " + System.identityHashCode(string2));
+
+        char tabs = '\t';
+        System.out.println( "tabs " +  tabs);
+
+        char quote = '\'';
+        System.out.println("Quote " + quote);
     }
 }
