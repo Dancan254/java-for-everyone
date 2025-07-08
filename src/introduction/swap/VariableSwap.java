@@ -1,4 +1,4 @@
-package introduction;
+package introduction.swap;
 
 public class VariableSwap {
 
