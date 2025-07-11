@@ -1,7 +1,5 @@
 package introduction.strings;
 
-import java.util.jar.JarOutputStream;
-
 public class Literals {
 
     public static void main(String[] args) {
