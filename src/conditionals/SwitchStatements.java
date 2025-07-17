@@ -43,6 +43,7 @@ public class SwitchStatements {
                 break;
             default:
                 System.out.println("Invalid day");
+                break;
         }
 
         //better version
