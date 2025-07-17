@@ -55,5 +55,15 @@ public class Strings {
 
         char quote = '\'';
         System.out.println("Quote " + quote);
+
+        String comp1 = "Hello";
+        String comp2 = "HeLLO";
+        System.out.println("Are they equal? " + comp1.equals(comp2));
+        // without considering case
+        System.out.println("Are they they equal when ignoring case? " + comp1.equalsIgnoreCase(comp2)); /// true
+        System.out.println("Comparing contents: " + comp1.contentEquals(comp2));
+
+        String comp3 = "Welcome to Java class of 2025";
+        System.out.println("Does it contain 2025? " + comp3.contains("2025"));
     }
 }
