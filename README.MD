@@ -3,7 +3,7 @@
 ## Overview
 
 **Java for Everyone** is an open-source educational initiative designed to guide learners through the fundamentals of Java programming. This repository contains curated code samples, organized by topic, to complement our live learning sessions. The aim is to provide a practical, hands-on approach to mastering Java, from basic syntax to advanced concepts.
-
+* [Link to google doc](https://docs.google.com/document/d/16_ucgjQvcWJHGRTGiBsnDJVvpn52fr8vUiK2ytZde3s/edit?usp=sharing)
 ## Table of Contents
 
 * [Course Structure](#course-structure)
