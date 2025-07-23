@@ -29,7 +29,7 @@ To utilize the code samples in this repository:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/yourusername/java-for-everyone.git
+   git clone https://github.com/Dancan254/java-for-everyone.git
    ```
 
 2. **Open in IntelliJ IDEA:**
