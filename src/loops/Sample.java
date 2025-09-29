@@ -14,5 +14,20 @@ public class Sample {
         //number -> 81
         System.out.println(number3);
         System.out.println(number4);
+
+        for (int i = 1; i <=100 ; i++) {
+            if (i % 7 == 0){
+                System.out.println("Yeeeiy got the number: " + i);
+                break;
+            }
+        }
+
+        // 1-10 -> odd - even-skip it -> continue
+        for (int i = 1; i <=10 ; i++) {
+            if (i % 2 == 0){
+                continue;
+            }
+            System.out.println("Odd: " + i);
+        }
     }
 }

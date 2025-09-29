@@ -51,5 +51,12 @@ public class Loops {
             }
             System.out.println();
         }
+        //try find the first number that is divisible by 7 - 1-100 -> exit
+        for (int i = 1; i <=100 ; i++) {
+            if (i % 7 == 0){
+                System.out.println("Yeeeiy got the number: " + i);
+                break;
+            }
+        }
     }
 }
