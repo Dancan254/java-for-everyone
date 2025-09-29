@@ -34,8 +34,6 @@ public class AgeCategoryClassifier {
                 }else{
                     System.out.println("Invalid age!");
                 }
-
-
                 scanner.close();
                 return;
             }else{
@@ -43,11 +41,6 @@ public class AgeCategoryClassifier {
             }
             System.out.println("Invalid age!");
         }
-
-
-
-     
-        
     }
 
     
