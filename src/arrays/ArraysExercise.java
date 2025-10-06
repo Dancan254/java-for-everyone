@@ -1,3 +1,5 @@
+package arrays;
+
 import java.util.Arrays;
 
 public class ArraysExercise {
@@ -29,6 +31,7 @@ public class ArraysExercise {
             int result = (int)Math.pow(number, 2);
             System.out.println(number + " power 2 "+result);
         }
+        System.out.println(Arrays.toString(numbers));
         //numbers -> loop through it
         // 0, 4 -> last index -> length -1
         System.out.println("For i loop");
@@ -65,6 +68,6 @@ class Person{
 
     @Override
     public String toString() {
-        return "Person{" + "name=" + name + ", age=" + age + '}';
+        return "arrays.Person{" + "name=" + name + ", age=" + age + '}';
     }
 }
