@@ -1,6 +1,6 @@
 # What is an Array?
 An array is a *fixed-size*, *contiguous block* of memory that stores homogenous elements(same type).
-
+In the Java programming language, arrays are objects, are dynamically created, and may be assigned to variables of type Object.
 ```java
 // Think of it like numbered boxes in a row
 // Index:  0    1    2    3    4
@@ -102,7 +102,7 @@ for (int i = 0; i < scores.length; i += 2) {
 ```
 **When to use**: When you need the index or want to modify array elements
 
-**Enhanced For Loop(For-Each)
+**Enhanced For Loop(For-Each)**
 ```java
 int[] scores = {85, 92, 78, 95, 88};
 
