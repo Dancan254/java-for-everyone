@@ -1,3 +1,5 @@
+import methods.LearningMethods;
+
 import java.util.Scanner;
 
 public class Audi {
