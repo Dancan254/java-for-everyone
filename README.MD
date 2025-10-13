@@ -120,5 +120,3 @@ For questions or support:
 
 * **LinkedIn:** [Ian Dancan](https://www.linkedin.com/in/ian-dancan/)
 * **Twitter:** [@your\_javaguy](https://x.com/your_javaguy)
-
-Join our community on [WhatsApp](https://chat.whatsapp.com/LJYX3srn18XDjoMqyDHhZr) to connect with fellow learners.
