@@ -287,11 +287,11 @@ public void calculate(double a, double b) { }
 public void calculate(int a, int b, int c) { }
 ```
 
-## 14. Returning Objects and Arrays
+## 14. Returning Objects and ArraysClassDemo
 
 Methods can return objects and arrays just like primitive types.
 
-**Returning Arrays:**
+**Returning ArraysClassDemo:**
 ```java
 public int[] getNumbers() {
     return new int[]{1, 2, 3, 4, 5};

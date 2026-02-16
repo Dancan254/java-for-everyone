@@ -45,7 +45,7 @@ String[] names = {"Alice", "Bob", "Charlie"};
 double[] prices = {9.99, 19.99, 29.99};
 boolean[] flags = {true, false, true};
 ```
-**Anonymous Arrays**    
+**Anonymous ArraysClassDemo**    
 ```java
 printArray(new int[]{1,2,4});
 
@@ -81,7 +81,7 @@ String[] names = new String[3];
 char[] letters = new char[3];
 // ['\u0000', '\u0000', '\u0000'] - null character
 ```
-## Iterating Through Arrays
+## Iterating Through ArraysClassDemo
 **Traditional For loop**
 ```java
 int[] scores = {85, 92, 78, 95, 88};
@@ -135,21 +135,21 @@ for (int i = 0; i < numbers.length; i++) {
 // numbers is now [2, 4, 6, 8, 10]
 ```
 
-### Using Arrays.toString()
+### Using ArraysClassDemo.toString()
 ```java
-import java.util.Arrays;
+import java.util.ArraysClassDemo;
 
 int[] numbers = {1, 2, 3, 4, 5};
 
 // Quick printing
 System.out.println(numbers);                    // ❌ Prints memory address
-System.out.println(Arrays.toString(numbers));   // ✅ Prints [1, 2, 3, 4, 5]
+System.out.println(ArraysClassDemo.toString(numbers));   // ✅ Prints [1, 2, 3, 4, 5]
 
 // Works for all types
 String[] fruits = {"Apple", "Banana", "Cherry"};
-System.out.println(Arrays.toString(fruits));    // [Apple, Banana, Cherry]
+System.out.println(ArraysClassDemo.toString(fruits));    // [Apple, Banana, Cherry]
 ```
-### Common Arrays Operations
+### Common ArraysClassDemo Operations
 #### Finding elements
 ```java
  //find min
@@ -192,17 +192,17 @@ static void reverseArray(int[] arr){
     //increment/decrement your pointers
 }
 ```
-### Copying Arrays
+### Copying ArraysClassDemo
 **Manual Copy**
 ```java
 //original array
 //arrayCopy - with original array size
 //assign the values
 ```
-**Arrays.copyOf()**
+**ArraysClassDemo.copyOf()**
 ```java
 //original array
-//create copy -> Arrays.copyOf(original, desiredLength)
+//create copy -> ArraysClassDemo.copyOf(original, desiredLength)
 ```
 
 **System.arrayCopy()**
@@ -216,9 +216,9 @@ static void reverseArray(int[] arr){
 //original
 //copy -> original.clone();
 ```
-**Comparing Arrays**
+**Comparing ArraysClassDemo**
 ```java
-import java.util.Arrays;
+import java.util.ArraysClassDemo;
 
 int[] arr1 = {1, 2, 3, 4, 5};
 int[] arr2 = {1, 2, 3, 4, 5};
@@ -234,9 +234,9 @@ System.out.println(Arrays.equals(arr1, arr3));  // false
 
 # Advanced Array Techniques
 
-## Multi-Dimensional Arrays
+## Multi-Dimensional ArraysClassDemo
 
-### 2D Arrays (Matrix)
+### 2D ArraysClassDemo (Matrix)
 ```java
 // Declaration and initialization
 int[][] matrix = new int[3][4];  // 3 rows, 4 columns
@@ -257,35 +257,44 @@ System.out.println("Rows: " + grid.length);           // 3
 System.out.println("Columns: " + grid[0].length);     // 4
 ```
 ### Iterating
+
 ```java
 int[][] matrix = {
-    {1, 2, 3},
-    {4, 5, 6},
-    {7, 8, 9}
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
 };
 
 // Using nested loops
-for (int i = 0; i < matrix.length; i++) {
-    for (int j = 0; j < matrix[i].length; j++) {
-        System.out.print(matrix[i][j] + " ");
+for(int i = 0; i<matrix.length;i++){
+        for(int j = 0; j<matrix[i].length;j++){
+        System.out.print(matrix[i][j]+" ");
     }
     System.out.println();
 }
 
 // Using enhanced for loops
-for (int[] row : matrix) {
-    for (int value : row) {
-        System.out.print(value + " ");
+        for(
+int[] row :matrix){
+        for(
+int value :row){
+        System.out.
+
+print(value +" ");
     }
-    System.out.println();
+            System.out.
+
+println();
 }
 
 // Print entire 2D array
-System.out.println(Arrays.deepToString(matrix));
+        System.out.
+
+println(ArraysClassDemo.deepToString(matrix));
 // [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 ```
 
-### Jagged Arrays(Non-Rectangular)
+### Jagged ArraysClassDemo(Non-Rectangular)
 ```java
 // Each row can have different lengths
 int[][] jagged = new int[3][];
@@ -311,9 +320,9 @@ for (int i = 0; i < triangle.length; i++) {
 ```
 
 ## Array Sorting
-- Arrays.sort()
+- ArraysClassDemo.sort()
 - Sort in descending order - pass a comparator
 - Custom sort with comparators e.g sort by length, sort by length then alphabetically
-## Filling Arrays
-- Arrays.fill(array, value)
-- Arrays.fill(array, startIndex, endIndex-1, value)
+## Filling ArraysClassDemo
+- ArraysClassDemo.fill(array, value)
+- ArraysClassDemo.fill(array, startIndex, endIndex-1, value)
