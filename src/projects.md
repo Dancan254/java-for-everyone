@@ -213,6 +213,38 @@ Wrap everything in a `main` loop that shows the following options until the user
 
 ---
 
+## Project 7 — Contact Book
+
+**Concepts:** records, interfaces, arrays, methods, encapsulation, Scanner
+
+### Description
+Build a command-line contact book that stores and manages personal contacts. All data objects must be modelled as records. The project focuses on practising records as immutable data carriers, compact constructor validation, static factory methods, and records implementing interfaces.
+
+### Records to build
+- `PhoneNumber(String countryCode, String number)` — compact constructor validates that both fields are non-blank and that `number` contains only digits and dashes; add an `isValid()` instance method
+- `Address(String street, String city, String country)` — compact constructor strips and normalises all fields to trimmed values
+- `Contact(String firstName, String lastName, PhoneNumber phone, Address address)` — compact constructor validates that first and last name are non-blank; add a `fullName()` method that returns first + last, and a static factory method `Contact.of(String firstName, String lastName, String countryCode, String number, String street, String city, String country)` that builds the nested records internally
+- `SearchResult(Contact contact, String matchedOn)` — carries a found contact and a string describing which field matched (e.g. `"last name"`)
+
+### Interface to define
+- `Printable` with a single method `void printDetails()` — `Contact` must implement it and print all fields in a clean, readable format
+
+### Required features
+- Store contacts in a fixed-size `Contact[]` array (capacity of 20)
+- `addContact(Contact c)` — adds to the array; reject duplicates by full name (case-insensitive)
+- `findByLastName(String lastName)` — returns a `SearchResult` or `null`
+- `findByCity(String city)` — returns an array of all `Contact` records whose address city matches
+- `deleteContact(String fullName)` — removes a contact by full name (shift remaining elements)
+- `listAll()` — calls `printDetails()` on every stored contact polymorphically via the `Printable` interface
+- A menu loop with options: Add contact, Search by last name, Search by city, Delete contact, List all, Exit
+
+### Bonus
+- Add an `Email(String address)` record with validation and add it as a component to `Contact`
+- Add a `ContactStats(int total, int citiesRepresented, String mostCommonCountry)` record and a method that computes and returns one
+- Use a generic `Result<T>(T value, String errorMessage)` record as the return type for `addContact` and `deleteContact` to communicate success or failure without throwing exceptions
+
+---
+
 ## Tips for all projects
 
 - Plan your classes on paper before writing any code. Draw the fields, methods, and relationships
