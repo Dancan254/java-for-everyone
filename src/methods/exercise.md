@@ -271,4 +271,4 @@ Once you complete the main exercises, try these:
 4. **Tail Recursion**: Convert regular recursion to tail recursion
 5. **Mutual Recursion**: Create two methods that call each other
 
-Happy Coding! 🚀
+Happy Coding!

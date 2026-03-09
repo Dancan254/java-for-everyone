@@ -1,10 +1,13 @@
-# Java Session 2: Data Types, Variables, and Operators
+# Java Fundamentals: Data Types, Variables, and Operators
 
-## 📚 Overview
-In this session, we'll explore the fundamental building blocks of Java programming: data types, variables, and operators. These concepts form the foundation for storing, manipulating, and processing data in Java applications.
+## Overview
 
-## 🎯 Learning Objectives
-By the end of this session, students will be able to:
+This guide covers the fundamental building blocks of Java programming: data types, variables, and operators. These concepts form the foundation for storing, manipulating, and processing data in Java applications.
+
+## Learning Objectives
+
+By the end of this section, you should be able to:
+
 - Understand and distinguish between Java's primitive data types
 - Declare, initialize, and use variables effectively
 - Apply proper naming conventions for variables
@@ -15,9 +18,10 @@ By the end of this session, students will be able to:
 
 ---
 
-## 1. 🔢 Java Data Types
+## 1. Java Data Types
 
 ### What are Data Types?
+
 **Data types** specify the kind of data that can be stored in a variable. They define the size of memory allocated and the operations that can be performed on the data.
 
 Java divides data types into two main categories: primitive types and reference types. Primitive types include boolean and numeric types, while reference types include class types, interface types, and array types.
@@ -26,7 +30,7 @@ Java divides data types into two main categories: primitive types and reference 
 
 Java provides **8 primitive data types** that are built into the language:
 
-#### 🔢 Numeric Types - Integers
+#### Numeric Types — Integers
 
 | Type | Size | Range | Default Value | Description |
 |------|------|-------|---------------|-------------|
@@ -43,7 +47,7 @@ int population = 1000000;       // Most common choice
 long distance = 150000000000L;  // Note the 'L' suffix for long literals
 ```
 
-#### 🔢 Numeric Types - Floating Point
+#### Numeric Types — Floating Point
 
 | Type | Size | Precision | Default Value | Description |
 |------|------|-----------|---------------|-------------|
@@ -57,7 +61,7 @@ double piValue = 3.14159265359; // Higher precision
 double scientificNotation = 1.23e10; // 12,300,000,000
 ```
 
-#### 🔤 Character Type
+#### Character Type
 
 | Type | Size | Range | Default Value | Description |
 |------|------|-------|---------------|-------------|
@@ -71,7 +75,7 @@ char unicodeChar = '\u0041'; // Represents 'A'
 char newline = '\n';         // Escape sequence
 ```
 
-#### ✅ Boolean Type
+#### Boolean Type
 
 | Type | Size | Values | Default Value | Description |
 |------|------|--------|---------------|-------------|
@@ -84,7 +88,7 @@ boolean isFinished = false;
 boolean hasPermission = (age >= 18); // Result of comparison
 ```
 
-### 1.2 Reference Types - Strings
+### 1.2 Reference Types — Strings
 
 **Strings** are objects in Java, not primitive types. They represent sequences of characters.
 
@@ -97,24 +101,25 @@ String nullString = null;       // No object reference
 
 ---
 
-## 2. 📦 Variables
+## 2. Variables
 
 ### What is a Variable?
+
 A **variable** is a named storage location in memory that holds data. Think of it as a labeled container that can store different values of a specific type.
 
 ### 2.1 Variable Declaration and Initialization
 
-#### Declaration Syntax:
+**Declaration syntax:**
 ```java
 dataType variableName;
 ```
 
-#### Initialization Syntax:
+**Initialization syntax:**
 ```java
 variableName = value;
 ```
 
-#### Declaration + Initialization (Recommended):
+**Declaration and initialization together (recommended):**
 ```java
 dataType variableName = value;
 ```
@@ -138,7 +143,7 @@ boolean isPassed = true;
 String courseName = "Java Programming";
 String instructor = "Dr. Smith";
 
-// Multiple variables of same type
+// Multiple variables of the same type
 int x = 10, y = 20, z = 30;
 ```
 
@@ -146,7 +151,7 @@ int x = 10, y = 20, z = 30;
 
 Java follows **camelCase** convention for variable names:
 
-#### ✅ Good Variable Names:
+**Good variable names:**
 ```java
 int studentAge;
 double accountBalance;
@@ -155,27 +160,28 @@ boolean isComplete;
 char userChoice;
 ```
 
-#### ❌ Poor Variable Names:
+**Poor variable names:**
 ```java
 int a;                    // Not descriptive
-double student_age;       // Uses underscore (not camelCase)
+double student_age;       // Uses underscore instead of camelCase
 String FirstName;         // Starts with uppercase
-boolean 2ndChoice;        // Starts with number
-char user-choice;         // Contains hyphen
+boolean 2ndChoice;        // Starts with a number (compiler error)
+char user-choice;         // Contains a hyphen (compiler error)
 ```
 
-#### 📋 Naming Rules:
-1. Must start with a letter, underscore (_), or dollar sign ($)
+**Naming rules:**
+1. Must start with a letter, underscore (`_`), or dollar sign (`$`)
 2. Cannot start with a number
-3. Cannot use Java keywords (int, class, public, etc.)
-4. Case-sensitive
+3. Cannot use Java keywords (`int`, `class`, `public`, etc.)
+4. Case-sensitive (`age` and `Age` are different variables)
 5. Should be descriptive and meaningful
 
 ---
 
-## 3. 🔧 Operators
+## 3. Operators
 
 ### What are Operators?
+
 **Operators** are special symbols that perform operations on variables and values (operands).
 
 ### 3.1 Arithmetic Operators
@@ -198,14 +204,14 @@ int product = a * b;    // 30
 int quotient = a / b;   // 3 (integer division)
 int remainder = a % b;  // 1
 
-double preciseDiv = (double) a / b; // 3.3333... (casting to double)
+double preciseDiv = (double) a / b; // 3.3333... (cast to double first)
 ```
 
 ### 3.2 Assignment Operators
 
 | Operator | Name | Description | Example | Equivalent |
 |----------|------|-------------|---------|------------|
-| `=` | Assignment | Assigns right value to left variable | `a = 5` | - |
+| `=` | Assignment | Assigns right value to left variable | `a = 5` | — |
 | `+=` | Addition assignment | Adds and assigns | `a += 3` | `a = a + 3` |
 | `-=` | Subtraction assignment | Subtracts and assigns | `a -= 2` | `a = a - 2` |
 | `*=` | Multiplication assignment | Multiplies and assigns | `a *= 4` | `a = a * 4` |
@@ -229,7 +235,7 @@ score %= 7;     // score is now 4
 | `++` | Increment | Increases value by 1 | `++a` or `a++` |
 | `--` | Decrement | Decreases value by 1 | `--a` or `a--` |
 
-**Pre vs Post Increment/Decrement:**
+**Pre vs post increment/decrement:**
 ```java
 int x = 5;
 int y = ++x;  // Pre-increment: x becomes 6, then y gets 6
@@ -263,29 +269,32 @@ int withParentheses = (10 + 5) * 2;  // Result is 30
 
 ---
 
-## 4. 🔄 Type Casting and Conversion
+## 4. Type Casting and Conversion
 
 ### What is Type Casting?
+
 **Type casting** is the process of converting one data type to another.
 
 ### 4.1 Implicit Casting (Automatic)
-Java automatically converts smaller data types to larger ones:
+
+Java automatically converts smaller data types to larger ones (widening conversion):
 
 ```java
 byte byteValue = 42;
-short shortValue = byteValue;  // byte to short
-int intValue = shortValue;     // short to int
-long longValue = intValue;     // int to long
-float floatValue = longValue;  // long to float
+short shortValue = byteValue;    // byte to short
+int intValue = shortValue;       // short to int
+long longValue = intValue;       // int to long
+float floatValue = longValue;    // long to float
 double doubleValue = floatValue; // float to double
 ```
 
 ### 4.2 Explicit Casting (Manual)
-For converting larger data types to smaller ones:
+
+For converting larger data types to smaller ones (narrowing conversion), you must cast explicitly:
 
 ```java
 double doubleValue = 9.78;
-int intValue = (int) doubleValue;  // 9 (decimal part lost)
+int intValue = (int) doubleValue;  // 9 — decimal part is truncated
 
 long longValue = 123456789L;
 int intValue2 = (int) longValue;   // Possible data loss
@@ -300,7 +309,7 @@ int intValue3 = (int) floatValue;  // 3
 ```java
 int age = 25;
 String ageString = String.valueOf(age);  // "25"
-String ageString2 = age + "";            // "25" (concatenation)
+String ageString2 = age + "";            // "25" (concatenation trick)
 ```
 
 **Converting from String:**
@@ -316,9 +325,10 @@ boolean flag = Boolean.parseBoolean("true");      // true
 ## 5. Input/Output with Scanner
 
 ### What is the Scanner Class?
-The Scanner class is widely used for reading user input in console applications and is part of the java.util package.
 
-### 5.1 Setting up Scanner
+The `Scanner` class reads user input from the console. It is part of the `java.util` package and must be imported before use.
+
+### 5.1 Setting Up Scanner
 
 ```java
 import java.util.Scanner;  // Import at top of file
@@ -326,9 +336,9 @@ import java.util.Scanner;  // Import at top of file
 public class InputExample {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         // Your code here
-        
+
         scanner.close();  // Always close Scanner when done
     }
 }
@@ -343,7 +353,7 @@ public class InputExample {
 | `nextFloat()` | Reads a float | `float weight = scanner.nextFloat();` |
 | `nextBoolean()` | Reads a boolean | `boolean flag = scanner.nextBoolean();` |
 | `next()` | Reads a single word | `String word = scanner.next();` |
-| `nextLine()` | Reads entire line | `String line = scanner.nextLine();` |
+| `nextLine()` | Reads an entire line | `String line = scanner.nextLine();` |
 
 ### 5.3 Complete Input Example
 
@@ -353,26 +363,25 @@ import java.util.Scanner;
 public class UserInput {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         System.out.print("Enter your name: ");
         String name = scanner.nextLine();
-        
+
         System.out.print("Enter your age: ");
         int age = scanner.nextInt();
-        
+
         System.out.print("Enter your GPA: ");
         double gpa = scanner.nextDouble();
-        
+
         System.out.print("Are you a student? (true/false): ");
         boolean isStudent = scanner.nextBoolean();
-        
-        // Output
+
         System.out.println("\n--- Your Information ---");
         System.out.println("Name: " + name);
         System.out.println("Age: " + age);
         System.out.println("GPA: " + gpa);
         System.out.println("Student: " + isStudent);
-        
+
         scanner.close();
     }
 }
@@ -380,7 +389,7 @@ public class UserInput {
 
 ---
 
-## 6. 🔗 String Operations
+## 6. String Operations
 
 ### 6.1 String Concatenation
 
@@ -414,23 +423,21 @@ String replaced = text.replace("Java", "C++"); // "C++ Programming"
 
 ---
 
-## 7. 🛠️ Key Concepts Deep Dive
+## 7. Key Concepts: Memory and Literals
 
 ### 7.1 Memory and Variable Storage
 
-**Stack Memory:**
+**Stack memory:**
 - Stores primitive variables and method parameters
-- Fast access
-- Automatically managed
+- Fast access, automatically managed
 
-**Heap Memory:**
+**Heap memory:**
 - Stores objects (including Strings)
-- Slower access than stack
-- Managed by Garbage Collector
+- Managed by the Garbage Collector
 
 ### 7.2 Literal Values
 
-**Numeric Literals:**
+**Numeric literals:**
 ```java
 int decimal = 42;           // Decimal
 int binary = 0b101010;      // Binary (42 in decimal)
@@ -438,21 +445,21 @@ int octal = 052;            // Octal (42 in decimal)
 int hex = 0x2A;             // Hexadecimal (42 in decimal)
 ```
 
-**Boolean Literals:**
+**Boolean literals:**
 ```java
 boolean isTrue = true;
 boolean isFalse = false;
 ```
 
-**Character Literals:**
+**Character literals:**
 ```java
 char letter = 'A';
 char digit = '7';
-char tab = '\t';            // Tab character
-char quote = '\'';          // Single quote
+char tab = '\t';     // Tab character
+char quote = '\'';   // Single quote
 ```
 
-**String Literals:**
+**String literals:**
 ```java
 String simple = "Hello World";
 String withEscape = "He said, \"Hello!\"";
@@ -461,11 +468,11 @@ String multiLine = "Line 1\nLine 2\nLine 3";
 
 ---
 
-## 8. 💻 Practice Activities
+## 8. Practice Activities
 
 ### Activity 1: Rectangle Area Calculator
 
-**Objective:** Calculate the area of a rectangle using user input.
+Calculate the area and perimeter of a rectangle using user input.
 
 ```java
 import java.util.Scanner;
@@ -473,19 +480,19 @@ import java.util.Scanner;
 public class RectangleArea {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         System.out.print("Enter rectangle length: ");
         double length = scanner.nextDouble();
-        
+
         System.out.print("Enter rectangle width: ");
         double width = scanner.nextDouble();
-        
+
         double area = length * width;
         double perimeter = 2 * (length + width);
-        
+
         System.out.println("Rectangle Area: " + area);
         System.out.println("Rectangle Perimeter: " + perimeter);
-        
+
         scanner.close();
     }
 }
@@ -493,34 +500,29 @@ public class RectangleArea {
 
 ### Activity 2: Variable Swapping
 
-**Objective:** Swap values of two variables.
+Swap the values of two variables.
 
 ```java
 public class VariableSwap {
     public static void main(String[] args) {
         int a = 10;
         int b = 20;
-        
+
         System.out.println("Before swap: a = " + a + ", b = " + b);
-        
-        // Method 1: Using temporary variable
+
+        // Using a temporary variable
         int temp = a;
         a = b;
         b = temp;
-        
+
         System.out.println("After swap: a = " + a + ", b = " + b);
-        
-        // Method 2: Without temporary variable (for integers)
-        // a = a + b;
-        // b = a - b;
-        // a = a - b;
     }
 }
 ```
 
 ### Activity 3: Arithmetic Calculator
 
-**Objective:** Perform basic arithmetic operations.
+Perform basic arithmetic operations on two numbers.
 
 ```java
 import java.util.Scanner;
@@ -528,26 +530,20 @@ import java.util.Scanner;
 public class Calculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         System.out.print("Enter first number: ");
         double num1 = scanner.nextDouble();
-        
+
         System.out.print("Enter second number: ");
         double num2 = scanner.nextDouble();
-        
-        double sum = num1 + num2;
-        double difference = num1 - num2;
-        double product = num1 * num2;
-        double quotient = num1 / num2;
-        double remainder = num1 % num2;
-        
+
         System.out.println("\n--- Results ---");
-        System.out.println(num1 + " + " + num2 + " = " + sum);
-        System.out.println(num1 + " - " + num2 + " = " + difference);
-        System.out.println(num1 + " * " + num2 + " = " + product);
-        System.out.println(num1 + " / " + num2 + " = " + quotient);
-        System.out.println(num1 + " % " + num2 + " = " + remainder);
-        
+        System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
+        System.out.println(num1 + " - " + num2 + " = " + (num1 - num2));
+        System.out.println(num1 + " * " + num2 + " = " + (num1 * num2));
+        System.out.println(num1 + " / " + num2 + " = " + (num1 / num2));
+        System.out.println(num1 + " % " + num2 + " = " + (num1 % num2));
+
         scanner.close();
     }
 }
@@ -555,9 +551,9 @@ public class Calculator {
 
 ---
 
-## 9. 🎯 Mini-Project: Personal Information System
+## 9. Mini-Project: Personal Information System
 
-**Objective:** Create a program that collects user information and performs calculations.
+Collect user information and perform calculations.
 
 ```java
 import java.util.Scanner;
@@ -565,147 +561,114 @@ import java.util.Scanner;
 public class PersonalInfo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
-        // Collect user information
+
         System.out.print("Enter your first name: ");
         String firstName = scanner.nextLine();
-        
+
         System.out.print("Enter your last name: ");
         String lastName = scanner.nextLine();
-        
+
         System.out.print("Enter your current age: ");
         int currentAge = scanner.nextInt();
-        
+
         System.out.print("Enter your birth year: ");
         int birthYear = scanner.nextInt();
-        
+
         System.out.print("Enter your favorite number: ");
         double favoriteNumber = scanner.nextDouble();
-        
-        // Calculations
+
         String fullName = firstName + " " + lastName;
         int ageNextYear = currentAge + 1;
-        int currentYear = 2024; // You can make this dynamic
+        int currentYear = 2025;
         int calculatedAge = currentYear - birthYear;
         double doubledFavorite = favoriteNumber * 2;
         double squaredFavorite = favoriteNumber * favoriteNumber;
-        
-        // Display results
+
         System.out.println("\n" + "=".repeat(40));
-        System.out.println("         PERSONAL INFORMATION REPORT");
+        System.out.println("      PERSONAL INFORMATION REPORT");
         System.out.println("=".repeat(40));
-        System.out.println("Full Name: " + fullName);
-        System.out.println("Current Age: " + currentAge + " years old");
-        System.out.println("Age Next Year: " + ageNextYear + " years old");
-        System.out.println("Calculated Age: " + calculatedAge + " years old");
-        System.out.println("Favorite Number: " + favoriteNumber);
-        System.out.println("Doubled Favorite: " + doubledFavorite);
-        System.out.println("Squared Favorite: " + squaredFavorite);
-        
-        // Fun facts
+        System.out.println("Full Name:        " + fullName);
+        System.out.println("Current Age:      " + currentAge);
+        System.out.println("Age Next Year:    " + ageNextYear);
+        System.out.println("Calculated Age:   " + calculatedAge);
+        System.out.println("Favorite Number:  " + favoriteNumber);
+        System.out.println("Doubled:          " + doubledFavorite);
+        System.out.println("Squared:          " + squaredFavorite);
+
         int daysLived = currentAge * 365;
-        int hoursLived = daysLived * 24;
-        
+        long hoursLived = (long) daysLived * 24;
+
         System.out.println("\n--- Fun Calculations ---");
-        System.out.println("Approximate days lived: " + daysLived);
+        System.out.println("Approximate days lived:  " + daysLived);
         System.out.println("Approximate hours lived: " + hoursLived);
-        
-        // Age verification
-        if (calculatedAge != currentAge) {
-            System.out.println("\nNote: There's a difference between your stated age and calculated age.");
-            System.out.println("This might be due to birthday timing within the year.");
-        }
-        
+
         scanner.close();
-        
-        System.out.println("\nThank you for using the Personal Information System!");
     }
 }
 ```
 
 ---
 
-## 10. 🚨 Common Mistakes and Troubleshooting
+## 10. Common Mistakes
 
-### 10.1 Type Mismatch Errors
+### Type Mismatch Errors
+
 ```java
-// ❌ Wrong
-int number = 3.14;  // Cannot assign double to int
+// Compiler error: cannot assign double to int
+int number = 3.14;
 
-// ✅ Correct
+// Correct: use double, or cast explicitly
 double number = 3.14;
-// OR
-int number = (int) 3.14;  // Explicit casting
+int number = (int) 3.14;  // decimal part is lost
 ```
 
-### 10.2 Scanner Input Issues
-```java
-// ❌ Problem: nextLine() after nextInt()
-Scanner scanner = new Scanner(System.in);
-int age = scanner.nextInt();
-String name = scanner.nextLine();  // This will be empty!
+### Scanner Input Issues
 
-// ✅ Solution: Add extra nextLine() to consume newline
-Scanner scanner = new Scanner(System.in);
+```java
+// Problem: nextLine() after nextInt() reads an empty string
 int age = scanner.nextInt();
-scanner.nextLine();  // Consume the newline
+String name = scanner.nextLine();  // picks up leftover newline
+
+// Solution: consume the newline before calling nextLine()
+int age = scanner.nextInt();
+scanner.nextLine();          // discard the newline character
 String name = scanner.nextLine();
 ```
 
-### 10.3 Division by Zero
-```java
-// ❌ Runtime error
-int result = 10 / 0;  // ArithmeticException
+### Division by Zero
 
-// ✅ Check before dividing
-int dividend = 10;
-int divisor = 0;
+```java
+// Runtime error: ArithmeticException
+int result = 10 / 0;
+
+// Guard against it:
 if (divisor != 0) {
     int result = dividend / divisor;
 } else {
-    System.out.println("Cannot divide by zero!");
+    System.out.println("Cannot divide by zero.");
 }
 ```
 
 ---
 
-## 11. 📚 Additional Resources
+## 11. Additional Resources
 
-### Official Documentation
-- [Oracle Java Tutorials - Language Basics](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html)
+- [Oracle Java Tutorials — Language Basics](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html)
 - [Java SE API Documentation](https://docs.oracle.com/en/java/javase/17/docs/api/)
-- [Scanner Class Documentation](https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html)
-
-### Best Practices
-1. **Use meaningful variable names** - `studentCount` instead of `sc`
-2. **Initialize variables when declaring** - `int age = 0;`
-3. **Always close Scanner objects** - `scanner.close();`
-4. **Use appropriate data types** - Don't use `long` for small numbers
-5. **Handle user input validation** - Check for valid input ranges
-6. **Use consistent formatting** - Follow Java naming conventions
-
-### Next Steps
-- Learn about conditional statements (if/else)
-- Explore loops (for, while, do-while)
-- Understand methods and functions
-- Study arrays and collections
-- Practice with more complex projects
+- [Scanner Class Documentation](https://docs.oracle.com/javase/17/docs/api/java.base/java/util/Scanner.html)
 
 ---
 
 ## Summary
 
-In this session, we covered:
+This section covered:
 
-✅ **Java's 8 primitive data types** and their characteristics  
-✅ **Variable declaration, initialization, and naming conventions**  
-✅ **Arithmetic and assignment operators** with precedence rules  
-✅ **Type casting and conversion** between data types  
-✅ **Scanner class** for reading user input  
-✅ **String operations** and concatenation  
-✅ **Memory concepts** and literal values  
-✅ **Practical examples** and hands-on exercises
+- Java's 8 primitive data types and their characteristics
+- Variable declaration, initialization, and naming conventions
+- Arithmetic and assignment operators with precedence rules
+- Type casting and conversion between data types
+- The `Scanner` class for reading user input
+- String operations and concatenation
+- Memory concepts (stack vs heap) and literal values
 
-You now have a solid foundation in Java's fundamental data handling concepts. Practice with the provided exercises and experiment with different combinations of data types and operators to strengthen your understanding!
-
-**Remember:** Programming is learned by doing. Don't just read the code - type it out, run it, modify it, and see what happens! 🚀
+**Next:** [Conditionals](../conditionals/Conditionals.MD)

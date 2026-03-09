@@ -1,3 +1,5 @@
+# Methods
+
 ## 1. Introduction to Methods
 
 A method is a block of code that performs a specific task and only runs when it is called. Methods are used to organize code, make it reusable, and improve readability.
@@ -287,11 +289,11 @@ public void calculate(double a, double b) { }
 public void calculate(int a, int b, int c) { }
 ```
 
-## 14. Returning Objects and ArraysClassDemo
+## 14. Returning Objects and Arrays
 
 Methods can return objects and arrays just like primitive types.
 
-**Returning ArraysClassDemo:**
+**Returning Arrays:**
 ```java
 public int[] getNumbers() {
     return new int[]{1, 2, 3, 4, 5};
@@ -403,6 +405,6 @@ public class ArrayHelper {
 
 ---
 
-This guide covers all the essential concepts about methods in Java. Practice writing different types of methods to solidify your understanding!
+This guide covers the essential concepts about methods in Java. Practice writing different types of methods to solidify your understanding.
 
-All the best Champs !!!
+**Next:** [Arrays](../arrays/Arrays.md)

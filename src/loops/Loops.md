@@ -1,53 +1,57 @@
-# Java Loops - Beginner-Friendly Guide
+# Loops
 
-## What You'll Learn
+## Learning Objectives
+
 By the end of this guide, you will be able to:
-- Use all three types of loops (for, while, do-while) in your programs
+
+- Use all three loop types (`for`, `while`, `do-while`) in your programs
 - Choose the right loop for different situations
-- Control loops with break and continue statements
+- Control loops with `break` and `continue`
 - Avoid common loop mistakes
-- Build fun projects using loops!
+- Build projects using loops
 
 ---
 
 ## What Are Loops?
 
 Imagine you want to print numbers from 1 to 1000. You could write:
+
 ```java
 System.out.println(1);
 System.out.println(2);
 System.out.println(3);
-// ... this would take forever!
+// ... this would take a very long time
 ```
 
 Or you could use a loop:
+
 ```java
 for (int i = 1; i <= 1000; i++) {
     System.out.println(i);
 }
 ```
 
-**Loops let you repeat code without writing it over and over again!**
+**Loops let you repeat code without writing it over and over again.**
 
 ---
 
-## 1. For Loops - "I know how many times"
+## 1. For Loops
 
-Use for loops when you know exactly how many times you want to repeat something.
+Use a `for` loop when you know exactly how many times you want to repeat something.
 
 ### Basic Structure
+
 ```java
-for (start; condition; update) {
+for (initialization; condition; update) {
     // Code to repeat
 }
 ```
 
 ### Example 1: Count to 10
+
 ```java
 public class CountToTen {
     public static void main(String[] args) {
-        System.out.println("Counting to 10:");
-        
         for (int i = 1; i <= 10; i++) {
             System.out.println(i);
         }
@@ -55,18 +59,19 @@ public class CountToTen {
 }
 ```
 
-**What happens:**
-1. `int i = 1` - Start with i = 1
-2. `i <= 10` - Keep going while i is 10 or less
-3. `i++` - Add 1 to i after each round
-4. The loop runs 10 times!
+**How it works:**
+1. `int i = 1` — start with `i = 1`
+2. `i <= 10` — keep going while `i` is 10 or less
+3. `i++` — increment `i` after each iteration
+4. The loop runs exactly 10 times
 
 ### Example 2: Multiplication Table
+
 ```java
 public class MultiplicationTable {
     public static void main(String[] args) {
         int number = 5;
-        
+
         System.out.println("5 times table:");
         for (int i = 1; i <= 10; i++) {
             System.out.println(number + " x " + i + " = " + (number * i));
@@ -76,14 +81,14 @@ public class MultiplicationTable {
 ```
 
 ### Enhanced For Loop (For-Each)
-Perfect for going through arrays or lists!
+
+Use the enhanced for loop to iterate over arrays or collections when you do not need the index:
 
 ```java
 public class ForEachExample {
     public static void main(String[] args) {
         String[] fruits = {"apple", "banana", "orange", "grape"};
-        
-        System.out.println("My favorite fruits:");
+
         for (String fruit : fruits) {
             System.out.println("- " + fruit);
         }
@@ -91,17 +96,16 @@ public class ForEachExample {
 }
 ```
 
-### Nested Loops - Loops inside loops!
+### Nested Loops
+
 ```java
 public class StarPattern {
     public static void main(String[] args) {
-        System.out.println("Star pyramid:");
-        
-        for (int i = 1; i <= 5; i++) {           // Outer loop: rows
-            for (int j = 1; j <= i; j++) {       // Inner loop: stars per row
+        for (int i = 1; i <= 5; i++) {        // Outer loop: rows
+            for (int j = 1; j <= i; j++) {    // Inner loop: stars per row
                 System.out.print("* ");
             }
-            System.out.println();                // New line after each row
+            System.out.println();              // New line after each row
         }
     }
 }
@@ -109,44 +113,46 @@ public class StarPattern {
 
 **Output:**
 ```
-* 
-* * 
-* * * 
-* * * * 
-* * * * * 
+*
+* *
+* * *
+* * * *
+* * * * *
 ```
 
 ---
 
-## 2. While Loops - "Keep going until..."
+## 2. While Loops
 
-Use while loops when you don't know exactly how many times to repeat, but you know when to stop.
+Use a `while` loop when you do not know exactly how many iterations you need, but you know the stopping condition.
 
 ### Basic Structure
+
 ```java
 while (condition) {
     // Code to repeat
-    // Don't forget to change the condition!
+    // Update the condition variable inside the loop body
 }
 ```
 
 ### Example 1: Countdown
+
 ```java
 public class Countdown {
     public static void main(String[] args) {
         int count = 10;
-        
-        System.out.println("Countdown:");
+
         while (count > 0) {
             System.out.println(count);
-            count--;  // Very important! This changes the condition
+            count--;  // This changes the condition — never forget it
         }
-        System.out.println("Blast off! 🚀");
+        System.out.println("Blast off!");
     }
 }
 ```
 
-### Example 2: Sum Until Limit
+### Example 2: Sum Until the User Stops
+
 ```java
 import java.util.Scanner;
 
@@ -155,21 +161,21 @@ public class SumNumbers {
         Scanner scanner = new Scanner(System.in);
         int sum = 0;
         int number;
-        
+
         System.out.println("Enter numbers to add (enter 0 to stop):");
-        
-        while (true) {  // This runs forever until we break out
+
+        while (true) {
             System.out.print("Enter a number: ");
             number = scanner.nextInt();
-            
+
             if (number == 0) {
-                break;  // Stop the loop!
+                break;
             }
-            
+
             sum += number;
             System.out.println("Current sum: " + sum);
         }
-        
+
         System.out.println("Final sum: " + sum);
         scanner.close();
     }
@@ -177,6 +183,7 @@ public class SumNumbers {
 ```
 
 ### Example 3: Input Validation
+
 ```java
 import java.util.Scanner;
 
@@ -184,19 +191,19 @@ public class AgeValidator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int age;
-        
+
         while (true) {
             System.out.print("Enter your age (1-120): ");
             age = scanner.nextInt();
-            
+
             if (age >= 1 && age <= 120) {
                 System.out.println("Thank you! Your age is " + age);
-                break;  // Valid input, exit loop
+                break;
             } else {
-                System.out.println("That doesn't seem right. Try again!");
+                System.out.println("That does not seem right. Please try again.");
             }
         }
-        
+
         scanner.close();
     }
 }
@@ -204,19 +211,21 @@ public class AgeValidator {
 
 ---
 
-## 3. Do-While Loops - "Do this, then check"
+## 3. Do-While Loops
 
-Use do-while loops when you want to do something at least once, then check if you should continue.
+Use a `do-while` loop when you want to execute the body **at least once**, then check the condition.
 
 ### Basic Structure
+
 ```java
 do {
     // Code to repeat
-    // This always runs at least once!
+    // This always runs at least once
 } while (condition);
 ```
 
 ### Example 1: Menu System
+
 ```java
 import java.util.Scanner;
 
@@ -224,20 +233,20 @@ public class SimpleMenu {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int choice;
-        
+
         do {
-            System.out.println("\n--- Fun Menu ---");
+            System.out.println("\n--- Menu ---");
             System.out.println("1. Tell a joke");
             System.out.println("2. Random number");
             System.out.println("3. Current time");
             System.out.println("0. Exit");
             System.out.print("Choose an option: ");
-            
+
             choice = scanner.nextInt();
-            
+
             switch (choice) {
                 case 1:
-                    System.out.println("Why don't scientists trust atoms? Because they make up everything! 😄");
+                    System.out.println("Why don't scientists trust atoms? Because they make up everything!");
                     break;
                 case 2:
                     System.out.println("Random number: " + (int)(Math.random() * 100));
@@ -246,19 +255,20 @@ public class SimpleMenu {
                     System.out.println("Current time: " + java.time.LocalTime.now());
                     break;
                 case 0:
-                    System.out.println("Goodbye! 👋");
+                    System.out.println("Goodbye!");
                     break;
                 default:
-                    System.out.println("Invalid choice! Try again.");
+                    System.out.println("Invalid choice. Please try again.");
             }
         } while (choice != 0);
-        
+
         scanner.close();
     }
 }
 ```
 
 ### Example 2: Password Checker
+
 ```java
 import java.util.Scanner;
 
@@ -266,17 +276,17 @@ public class PasswordChecker {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String password;
-        
+
         do {
             System.out.print("Create a password (at least 6 characters): ");
             password = scanner.nextLine();
-            
+
             if (password.length() < 6) {
-                System.out.println("Too short! Make it longer.");
+                System.out.println("Too short. Please make it longer.");
             }
         } while (password.length() < 6);
-        
-        System.out.println("Great password! ✅");
+
+        System.out.println("Password accepted.");
         scanner.close();
     }
 }
@@ -284,32 +294,36 @@ public class PasswordChecker {
 
 ---
 
-## 4. Loop Control - Break and Continue
+## 4. Loop Control — Break and Continue
 
-Sometimes you need to control your loops in special ways.
+### Break
 
-### Break - "Stop the loop right now!"
+`break` exits the loop immediately, regardless of the condition.
+
 ```java
 public class BreakExample {
     public static void main(String[] args) {
         System.out.println("Finding the first number divisible by 7:");
-        
+
         for (int i = 1; i <= 100; i++) {
             if (i % 7 == 0) {
-                System.out.println("Found it: " + i);
-                break;  // Stop looking, we found one!
+                System.out.println("Found: " + i);
+                break;
             }
         }
     }
 }
 ```
 
-### Continue - "Skip this round, go to the next!"
+### Continue
+
+`continue` skips the rest of the current iteration and moves to the next one.
+
 ```java
 public class ContinueExample {
     public static void main(String[] args) {
         System.out.println("Odd numbers from 1 to 10:");
-        
+
         for (int i = 1; i <= 10; i++) {
             if (i % 2 == 0) {
                 continue;  // Skip even numbers
@@ -321,97 +335,98 @@ public class ContinueExample {
 }
 ```
 
-### Advanced: Labeled Break and Continue
-When you have nested loops and want to break out of the outer one:
+### Labeled Break and Continue
+
+When you have nested loops and need to break out of the outer loop:
 
 ```java
 public class LabeledBreak {
     public static void main(String[] args) {
         outerLoop: for (int i = 1; i <= 3; i++) {
-            System.out.println("Outer loop: " + i);
-            
+            System.out.println("Outer: " + i);
+
             for (int j = 1; j <= 3; j++) {
                 if (i == 2 && j == 2) {
-                    System.out.println("Breaking out of everything!");
-                    break outerLoop;  // Break out of the outer loop
+                    System.out.println("Breaking out of both loops.");
+                    break outerLoop;
                 }
-                System.out.println("  Inner loop: " + j);
+                System.out.println("  Inner: " + j);
             }
         }
-        System.out.println("All done!");
+        System.out.println("Done.");
     }
 }
 ```
 
 ---
 
-## 5. Common Mistakes and How to Avoid Them
+## 5. Common Mistakes
 
-### 1. Infinite Loops 😱
+### Infinite Loops
+
 ```java
-// BAD - This never stops!
+// Problem: i never changes, so the condition is always true
 int i = 1;
 while (i <= 10) {
     System.out.println(i);
-    // Forgot to change i!
+    // Missing: i++;
 }
 
-// GOOD - This stops after 10 times
+// Correct
 int i = 1;
 while (i <= 10) {
     System.out.println(i);
-    i++;  // Don't forget this!
+    i++;
 }
 ```
 
-### 2. Off-by-One Errors
+### Off-by-One Errors
+
 ```java
-// BAD - Only prints 9 numbers (1 to 9)
+// Prints 9 numbers (1 through 9) — likely not what was intended
 for (int i = 1; i < 10; i++) {
     System.out.println(i);
 }
 
-// GOOD - Prints 10 numbers (1 to 10)
+// Prints 10 numbers (1 through 10)
 for (int i = 1; i <= 10; i++) {
     System.out.println(i);
 }
 ```
 
-### 3. Variable Scope
+### Variable Scope
+
 ```java
-public class VariableScope {
-    public static void main(String[] args) {
-        for (int i = 0; i < 5; i++) {
-            int doubled = i * 2;
-            System.out.println(doubled);
-        }
-        
-        // These won't work - variables are gone after the loop!
-        // System.out.println(i);       // Error!
-        // System.out.println(doubled); // Error!
-    }
+for (int i = 0; i < 5; i++) {
+    int doubled = i * 2;
+    System.out.println(doubled);
 }
+
+// Both i and doubled are out of scope here — the code below will not compile
+// System.out.println(i);
+// System.out.println(doubled);
 ```
 
 ---
 
-## 6. Which Loop Should I Use?
+## 6. Choosing the Right Loop
 
-| Situation | Best Loop | Why |
-|-----------|-----------|-----|
-| I know exactly how many times | **for** | Clear start and end |
-| I want to go through an array/list | **for-each** | Simple and clean |
-| I don't know how many times, but I know when to stop | **while** | Flexible condition |
-| I need to do something at least once | **do-while** | Guarantees one execution |
-| I'm making a menu system | **do-while** | User sees menu at least once |
-| I'm validating user input | **while** or **do-while** | Keep asking until correct |
+| Situation | Best Loop |
+|-----------|-----------|
+| You know exactly how many iterations are needed | `for` |
+| You want to go through every element in an array or list | `for-each` |
+| You do not know how many times, but know the stopping condition | `while` |
+| You need the body to run at least once before checking | `do-while` |
+| Building a menu system | `do-while` |
+| Validating user input | `while` or `do-while` |
 
 ---
 
 ## 7. Practice Exercises
 
 ### Exercise 1: Number Squares
-Write a program that asks the user for a number and prints that many numbers with their squares.
+
+Write a program that asks the user for a number `n` and prints each number from 1 to `n` alongside its square.
 
 ```java
 import java.util.Scanner;
@@ -419,24 +434,25 @@ import java.util.Scanner;
 public class NumberSquares {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
-        System.out.print("How many numbers would you like? ");
+
+        System.out.print("How many numbers? ");
         int count = scanner.nextInt();
-        
+
         System.out.println("\nNumber\tSquare");
         System.out.println("------\t------");
-        
+
         for (int i = 1; i <= count; i++) {
             System.out.println(i + "\t" + (i * i));
         }
-        
+
         scanner.close();
     }
 }
 ```
 
 ### Exercise 2: Sum Until 100
-Create a program that adds consecutive numbers (1, 2, 3, 4...) until the sum exceeds 100.
+
+Add consecutive integers (1, 2, 3, ...) until the running total exceeds 100.
 
 ```java
 public class SumUntil100 {
@@ -444,23 +460,22 @@ public class SumUntil100 {
         int sum = 0;
         int number = 1;
         int count = 0;
-        
-        System.out.println("Adding numbers until sum > 100:");
-        
+
         while (sum <= 100) {
             sum += number;
             count++;
             System.out.println("Added " + number + ", sum = " + sum);
             number++;
         }
-        
-        System.out.println("\nIt took " + count + " numbers to exceed 100!");
+
+        System.out.println("It took " + count + " numbers to exceed 100.");
     }
 }
 ```
 
 ### Exercise 3: Grade Calculator
-Make a program that keeps asking for grades until the user enters -1, then shows the average.
+
+Keep asking the user for grades until they enter -1, then print the average.
 
 ```java
 import java.util.Scanner;
@@ -471,30 +486,29 @@ public class GradeCalculator {
         double sum = 0;
         int count = 0;
         double grade;
-        
+
         System.out.println("Enter grades (enter -1 to finish):");
-        
+
         do {
             System.out.print("Enter grade: ");
             grade = scanner.nextDouble();
-            
+
             if (grade != -1) {
                 if (grade >= 0 && grade <= 100) {
                     sum += grade;
                     count++;
                 } else {
-                    System.out.println("Please enter a grade between 0 and 100!");
+                    System.out.println("Please enter a grade between 0 and 100.");
                 }
             }
         } while (grade != -1);
-        
+
         if (count > 0) {
-            double average = sum / count;
-            System.out.println("Average grade: " + String.format("%.1f", average));
+            System.out.println("Average grade: " + String.format("%.1f", sum / count));
         } else {
             System.out.println("No valid grades entered.");
         }
-        
+
         scanner.close();
     }
 }
@@ -502,9 +516,10 @@ public class GradeCalculator {
 
 ---
 
-## 8. Fun Projects
+## 8. Projects
 
 ### Project 1: Number Guessing Game
+
 ```java
 import java.util.Scanner;
 import java.util.Random;
@@ -513,57 +528,52 @@ public class GuessingGame {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-        
+
         int secretNumber = random.nextInt(100) + 1;  // 1 to 100
         int attempts = 0;
         int maxAttempts = 7;
         boolean won = false;
-        
-        System.out.println("🎯 Welcome to the Number Guessing Game!");
+
+        System.out.println("Welcome to the Number Guessing Game!");
         System.out.println("I'm thinking of a number between 1 and 100.");
-        System.out.println("You have " + maxAttempts + " attempts. Good luck!");
-        
+        System.out.println("You have " + maxAttempts + " attempts.");
+
         while (attempts < maxAttempts && !won) {
             attempts++;
             System.out.print("\nAttempt " + attempts + ": Enter your guess: ");
             int guess = scanner.nextInt();
-            
+
             if (guess == secretNumber) {
                 won = true;
-                System.out.println("🎉 Amazing! You got it in " + attempts + " tries!");
+                System.out.println("Correct! You got it in " + attempts + " tries.");
             } else if (guess < secretNumber) {
-                System.out.println("📈 Too low! Go higher!");
-                
-                // Give hints
+                System.out.println("Too low.");
                 if (secretNumber - guess <= 10) {
-                    System.out.println("💡 You're getting close!");
+                    System.out.println("(You are getting close!)");
                 }
             } else {
-                System.out.println("📉 Too high! Go lower!");
-                
-                // Give hints
+                System.out.println("Too high.");
                 if (guess - secretNumber <= 10) {
-                    System.out.println("💡 You're getting close!");
+                    System.out.println("(You are getting close!)");
                 }
             }
-            
+
             if (!won && attempts < maxAttempts) {
-                int remaining = maxAttempts - attempts;
-                System.out.println("You have " + remaining + " attempts left.");
+                System.out.println("Attempts remaining: " + (maxAttempts - attempts));
             }
         }
-        
+
         if (!won) {
-            System.out.println("\n😔 Game over! The number was " + secretNumber);
-            System.out.println("Don't worry, you'll get it next time!");
+            System.out.println("\nGame over. The number was " + secretNumber + ".");
         }
-        
+
         scanner.close();
     }
 }
 ```
 
 ### Project 2: Simple Calculator with Menu
+
 ```java
 import java.util.Scanner;
 
@@ -571,129 +581,114 @@ public class SimpleCalculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int choice;
-        
-        System.out.println("🧮 Welcome to Simple Calculator!");
-        
+
+        System.out.println("Simple Calculator");
+
         do {
-            System.out.println("\n--- Calculator Menu ---");
-            System.out.println("1. Add two numbers");
-            System.out.println("2. Subtract two numbers");
-            System.out.println("3. Multiply two numbers");
-            System.out.println("4. Divide two numbers");
-            System.out.println("5. Create multiplication table");
+            System.out.println("\n--- Menu ---");
+            System.out.println("1. Add");
+            System.out.println("2. Subtract");
+            System.out.println("3. Multiply");
+            System.out.println("4. Divide");
+            System.out.println("5. Multiplication table");
             System.out.println("0. Exit");
             System.out.print("Choose an option: ");
-            
+
             choice = scanner.nextInt();
-            
+
             switch (choice) {
-                case 1:
-                    System.out.print("Enter first number: ");
-                    double add1 = scanner.nextDouble();
-                    System.out.print("Enter second number: ");
-                    double add2 = scanner.nextDouble();
-                    System.out.println("Result: " + add1 + " + " + add2 + " = " + (add1 + add2));
+                case 1: {
+                    System.out.print("First number: ");
+                    double a = scanner.nextDouble();
+                    System.out.print("Second number: ");
+                    double b = scanner.nextDouble();
+                    System.out.println("Result: " + (a + b));
                     break;
-                    
-                case 2:
-                    System.out.print("Enter first number: ");
-                    double sub1 = scanner.nextDouble();
-                    System.out.print("Enter second number: ");
-                    double sub2 = scanner.nextDouble();
-                    System.out.println("Result: " + sub1 + " - " + sub2 + " = " + (sub1 - sub2));
+                }
+                case 2: {
+                    System.out.print("First number: ");
+                    double a = scanner.nextDouble();
+                    System.out.print("Second number: ");
+                    double b = scanner.nextDouble();
+                    System.out.println("Result: " + (a - b));
                     break;
-                    
-                case 3:
-                    System.out.print("Enter first number: ");
-                    double mul1 = scanner.nextDouble();
-                    System.out.print("Enter second number: ");
-                    double mul2 = scanner.nextDouble();
-                    System.out.println("Result: " + mul1 + " × " + mul2 + " = " + (mul1 * mul2));
+                }
+                case 3: {
+                    System.out.print("First number: ");
+                    double a = scanner.nextDouble();
+                    System.out.print("Second number: ");
+                    double b = scanner.nextDouble();
+                    System.out.println("Result: " + (a * b));
                     break;
-                    
-                case 4:
-                    System.out.print("Enter first number: ");
-                    double div1 = scanner.nextDouble();
-                    System.out.print("Enter second number: ");
-                    double div2 = scanner.nextDouble();
-                    
-                    if (div2 != 0) {
-                        System.out.println("Result: " + div1 + " ÷ " + div2 + " = " + (div1 / div2));
+                }
+                case 4: {
+                    System.out.print("First number: ");
+                    double a = scanner.nextDouble();
+                    System.out.print("Second number: ");
+                    double b = scanner.nextDouble();
+                    if (b != 0) {
+                        System.out.println("Result: " + (a / b));
                     } else {
-                        System.out.println("Error: Cannot divide by zero!");
+                        System.out.println("Error: Cannot divide by zero.");
                     }
                     break;
-                    
-                case 5:
-                    System.out.print("Enter a number for multiplication table: ");
-                    int tableNum = scanner.nextInt();
-                    System.out.print("How many rows? ");
+                }
+                case 5: {
+                    System.out.print("Number: ");
+                    int n = scanner.nextInt();
+                    System.out.print("Rows: ");
                     int rows = scanner.nextInt();
-                    
-                    System.out.println("\nMultiplication Table for " + tableNum + ":");
                     for (int i = 1; i <= rows; i++) {
-                        System.out.println(tableNum + " × " + i + " = " + (tableNum * i));
+                        System.out.println(n + " x " + i + " = " + (n * i));
                     }
                     break;
-                    
+                }
                 case 0:
-                    System.out.println("Thanks for using the calculator! Goodbye! 👋");
+                    System.out.println("Goodbye.");
                     break;
-                    
                 default:
-                    System.out.println("Invalid choice! Please try again.");
+                    System.out.println("Invalid choice.");
             }
-            
+
         } while (choice != 0);
-        
+
         scanner.close();
     }
 }
 ```
 
 ### Project 3: Factorial Calculator
+
 ```java
 import java.util.Scanner;
 
 public class FactorialCalculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
-        System.out.println("🔢 Factorial Calculator!");
-        System.out.println("(Factorial of n = n × (n-1) × (n-2) × ... × 1)");
-        
-        System.out.print("\nEnter a positive number: ");
+
+        System.out.println("Factorial Calculator");
+        System.out.print("Enter a non-negative integer: ");
         int number = scanner.nextInt();
-        
+
         if (number < 0) {
-            System.out.println("Factorial is not defined for negative numbers!");
+            System.out.println("Factorial is not defined for negative numbers.");
         } else if (number == 0) {
             System.out.println("0! = 1");
         } else {
             long factorial = 1;
-            
-            System.out.print(number + "! = ");
-            
-            // Show the calculation step by step
             for (int i = number; i >= 1; i--) {
-                System.out.print(i);
-                if (i > 1) {
-                    System.out.print(" × ");
-                }
                 factorial *= i;
             }
-            
-            System.out.println(" = " + factorial);
-            
-            // Show step-by-step calculation
+            System.out.println(number + "! = " + factorial);
+
             System.out.println("\nStep-by-step:");
-            long stepResult = 1;
+            long running = 1;
             for (int i = 1; i <= number; i++) {
-                stepResult *= i;
-                System.out.println("Step " + i + ": " + stepResult);
+                running *= i;
+                System.out.println("Step " + i + ": " + running);
             }
         }
-        
+
         scanner.close();
     }
 }
@@ -701,98 +696,52 @@ public class FactorialCalculator {
 
 ---
 
-## 9. Quick Review Quiz
+## 9. Quick Review
 
-Test your understanding! Try to answer these before looking at the solutions:
+1. **What loop would you use to ask a user for their password until they enter a valid one?**
+   A `do-while` loop — it guarantees the prompt appears at least once.
 
-1. **What type of loop would you use if you want to ask a user for their password and keep asking until they get it right?**
-   <details>
-   <summary>Answer</summary>
-
-   do-while loop or while loop. do-while guarantees you ask at least once.
-   </details>
-
-2. **What's the difference between break and continue?**
-   <details>
-   <summary>Answer</summary>
-
-    - `break`: Stops the entire loop
-    - `continue`: Skips the rest of this round and goes to the next iteration
-   </details>
+2. **What is the difference between `break` and `continue`?**
+   - `break` exits the loop entirely.
+   - `continue` skips the remainder of the current iteration and moves to the next one.
 
 3. **Fill in the blanks to count from 5 to 15:**
-   ```java
-   for (int i = ____; i <= ____; i____) {
-       System.out.println(i);
-   }
-   ```
-   <details>
-   <summary>Answer</summary>
-
    ```java
    for (int i = 5; i <= 15; i++) {
        System.out.println(i);
    }
    ```
-   </details>
 
-4. **What's wrong with this code?**
+4. **What is wrong with this code?**
    ```java
    int i = 0;
    while (i < 5) {
        System.out.println("Hello");
    }
    ```
-   <details>
-   <summary>Answer</summary>
-
-   It's an infinite loop! We never increment `i`, so it stays 0 forever.
-   </details>
+   `i` is never incremented, so the condition is always `true` — this is an infinite loop.
 
 5. **When should you use a for-each loop?**
-   <details>
-   <summary>Answer</summary>
-
-   When you want to go through every item in an array or collection and you don't need to know the index position.
-   </details>
+   When you need to visit every element in an array or collection and do not need the index.
 
 ---
 
 ## 10. What's Next?
 
-Congratulations! You now know how to use loops in Java. Here are some ideas for further practice:
+**Next:** [Methods](../methods/methods.md)
 
-### Easy Projects
-- Create a times table generator for any number
-- Make a simple text-based adventure game with menus
-- Build a program that finds all prime numbers up to 100
+### Ideas for Further Practice
 
-### Medium Projects
-- Create a student grade management system
-- Build a simple text-based tic-tac-toe game
-- Make a program that draws ASCII art patterns
+**Beginner:**
+- Build a times table generator for any number the user enters
+- Write a program that finds all prime numbers up to 100
+- Create a simple text menu that performs different actions
 
-### Challenge Projects
-- Create a text-based RPG with combat system
-- Build a simple inventory management system
-- Make a program that can solve basic math equations
+**Intermediate:**
+- Build a student grade management system
+- Create a program that draws various ASCII patterns (triangles, diamonds)
+- Implement a basic text-based tic-tac-toe game
 
-### Keep Learning
-- Learn about arrays and how loops work with them
-- Explore methods (functions) and how to use loops inside them
-- Study object-oriented programming and loops in classes
-
----
-
-## Tips for Success
-
-1. **Start small** - Begin with simple counting loops before trying complex projects
-2. **Draw it out** - Sketch what you want your loop to do before coding
-3. **Test frequently** - Run your code often to catch mistakes early
-4. **Use descriptive variable names** - `counter` is better than `i` for beginners
-5. **Comment your code** - Explain what each loop does
-6. **Practice daily** - Even 15 minutes of loop practice helps!
-
-Remember: Every programmer started where you are now. Keep practicing, stay curious, and don't be afraid to make mistakes - that's how you learn! 🚀
-
-Happy coding! 🎉
+**Advanced:**
+- Write a program that can solve basic math equations entered as strings
+- Build a simple inventory management system using arrays and loops
