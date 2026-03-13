@@ -12,7 +12,7 @@ The content covers core Java syntax, object-oriented design, the standard librar
 
 ### Prerequisites
 
-- Java 17 or later (download from [Oracle](https://www.oracle.com/java/technologies/downloads/))
+- Java 21 or later (download from [Oracle](https://www.oracle.com/java/technologies/downloads/))
 - An IDE such as [IntelliJ IDEA](https://www.jetbrains.com/idea/) (Community Edition is free)
 
 ### Clone the Repository
