@@ -95,6 +95,12 @@ Work through the topics in the order listed below. Each entry links to the markd
 | The var Keyword | [var.md](src/introduction/var.md) | Local type inference, where var works, readability guidelines |
 | Strings: Deep Dive | [strings-deep-dive.md](src/introduction/strings-deep-dive.md) | String pool, StringBuilder, format specifiers, text blocks, regex |
 
+### Database
+
+| # | Topic | Guide | Key Concepts |
+|---|-------|-------|--------------|
+| 26 | JDBC | [jdbc.md](src/jdbc/jdbc.md) | DriverManager, PreparedStatement, ResultSet, transactions, DAO pattern, connection pooling |
+
 ### Tooling
 
 | Topic | Guide | Key Concepts |
@@ -119,7 +125,11 @@ The following exercise files contain dedicated practice sets with progressively 
 
 ## Mini Projects
 
-After completing the core curriculum, apply your skills through the guided mini projects described in [src/projects.md](src/projects.md). Projects range from a basic number guessing game to a fully functional contact book with file persistence.
+After completing the core curriculum, apply your skills through the guided mini projects described in [src/projects.md](src/projects.md). Projects range from a console quiz game to a fully functional contact book using records.
+
+## Capstone Projects
+
+Once you are comfortable with the mini projects and have covered JDBC, work through the capstone projects in [src/capstone-projects.md](src/capstone-projects.md). These are full applications — persistent, multi-layered, and closer to what production Java code looks like. Complete them before starting Spring Boot.
 
 ---
 
@@ -148,9 +158,11 @@ java-for-everyone/
 │   ├── optional/           optional.md, OptionalDemo.java
 │   ├── datetime/           datetime.md, DateTimeDemo.java
 │   ├── io/                 io.md, FileReadingDemo.java, FileWritingDemo.java
+│   ├── jdbc/               jdbc.md, DAO examples
 │   ├── tooling/            build-tools.md
 │   ├── bank/               bank mini project files
-│   └── projects.md         mini project descriptions
+│   ├── projects.md         mini project descriptions (OOP-focused)
+│   └── capstone-projects.md  full application projects (before Spring Boot)
 └── README.MD
 ```
 

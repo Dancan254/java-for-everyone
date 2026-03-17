@@ -1,3 +1,5 @@
+package loops.solutions;
+
 /**
  * Exercise6Solution.java
  *

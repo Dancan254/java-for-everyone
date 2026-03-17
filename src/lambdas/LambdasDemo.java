@@ -111,7 +111,7 @@ public class LambdasDemo {
         // Output: 30
 
         // Explicit parameter types — rarely needed; the compiler infers them from the interface.
-        BiFunction<String, Integer, String> repeat = (String str, int times) -> str.repeat(times);
+        BiFunction<String, Integer, String> repeat = (String str, Integer times) -> str.repeat(times);
         System.out.println(repeat.apply("ab", 3));
         // Output: ababab
 

@@ -1,3 +1,5 @@
+package loops.solutions;
+
 import java.util.Random;
 
 /**
