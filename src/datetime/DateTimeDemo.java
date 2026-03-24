@@ -1,3 +1,5 @@
+package datetime;
+
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -27,16 +29,17 @@ import java.util.Locale;
 public class DateTimeDemo {
 
     public static void main(String[] args) {
-        localDateDemo();
-        localTimeDemo();
-        localDateTimeDemo();
-        dateTimeFormatterDemo();
-        periodDemo();
-        durationDemo();
-        zonedDateTimeDemo();
+//        localDateDemo();
+//        localTimeDemo();
+//        localDateTimeDemo();
+//        dateTimeFormatterDemo();
+//        periodDemo();
+//        durationDemo();
+//        zonedDateTimeDemo();
+        //ZoneId.getAvailableZoneIds().stream().sorted().forEach(System.out::println);
         instantDemo();
-        practicalPatternsDemo();
-        commonMistakesDemo();
+//        practicalPatternsDemo();
+//        commonMistakesDemo();
     }
 
     // -------------------------------------------------------------------------
@@ -168,7 +171,7 @@ public class DateTimeDemo {
         System.out.println(date.format(ddmmyyyy)); // Output: 15/03/2024
 
         // MMMM = full month name; locale must be specified for predictable output.
-        DateTimeFormatter usFormat = DateTimeFormatter.ofPattern("MMMM d, yyyy", Locale.ENGLISH);
+        DateTimeFormatter usFormat = DateTimeFormatter.ofPattern("MMMM d, yyyy", Locale.GERMAN);
         System.out.println(date.format(usFormat)); // Output: March 15, 2024
 
         // Formatting a LocalDateTime with hour and minute.
@@ -255,11 +258,11 @@ public class DateTimeDemo {
 
         // Create a ZonedDateTime for a fixed point in time in different zones.
         // Using a fixed LocalDateTime so the output is deterministic.
-        LocalDateTime base = LocalDateTime.of(2024, 3, 15, 14, 30, 0);
+        LocalDateTime kenyanTime = LocalDateTime.now();//LocalDateTime.of(2024, 3, 15, 14, 30, 0);
 
-        ZonedDateTime london  = base.atZone(ZoneId.of("Europe/London"));
-        ZonedDateTime newYork = base.atZone(ZoneId.of("America/New_York"));
-        ZonedDateTime tokyo   = base.atZone(ZoneId.of("Asia/Tokyo"));
+        ZonedDateTime london  = kenyanTime.atZone(ZoneId.of("Europe/London"));
+        ZonedDateTime newYork = kenyanTime.atZone(ZoneId.of("America/New_York"));
+        ZonedDateTime tokyo   = kenyanTime.atZone(ZoneId.of("Asia/Tokyo"));
 
         // Each ZonedDateTime carries its offset from UTC.
         System.out.println(london);  // Output: 2024-03-15T14:30+00:00[Europe/London]

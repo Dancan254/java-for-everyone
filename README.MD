@@ -111,15 +111,37 @@ Work through the topics in the order listed below. Each entry links to the markd
 
 ## Practice Exercises
 
-The following exercise files contain dedicated practice sets with progressively challenging problems, mini-projects, and common-mistake sections.
+Every topic has a dedicated exercise file with progressively challenging problems, mini-projects, and a common-mistakes section. Solutions are in the `solutions/` subfolder of each topic.
+
+### Core Language
 
 | Topic | Exercises | Solutions |
 |-------|-----------|-----------|
+| Introduction | [src/introduction/exercise.md](src/introduction/exercise.md) | [src/introduction/solutions/](src/introduction/solutions/) |
+| Conditionals | [src/conditionals/exercise.md](src/conditionals/exercise.md) | [src/conditionals/solutions/](src/conditionals/solutions/) |
 | Loops | [src/loops/exercise.md](src/loops/exercise.md) | [src/loops/solutions/](src/loops/solutions/) |
+| Methods | [src/methods/exercise.md](src/methods/exercise.md) | [src/methods/solutions/](src/methods/solutions/) |
 | Arrays | [src/arrays/exercise.md](src/arrays/exercise.md) | [src/arrays/solutions/](src/arrays/solutions/) |
-| OOP | [src/oop/exercise.md](src/oop/exercise.md) | — |
-| Methods | [src/methods/exercise.md](src/methods/exercise.md) | — |
-| Enums & Collections | [src/collections/exercise.md](src/collections/exercise.md) | [src/collections/solutions/](src/collections/solutions/) |
+
+### Object-Oriented Programming
+
+| Topic | Exercises | Solutions |
+|-------|-----------|-----------|
+| OOP | [src/oop/exercise.md](src/oop/exercise.md) | [src/oop/solutions/](src/oop/solutions/) |
+
+### Standard Library and Modern Java
+
+| Topic | Exercises | Solutions |
+|-------|-----------|-----------|
+| Exception Handling | [src/exceptions/exercise.md](src/exceptions/exercise.md) | [src/exceptions/solutions/](src/exceptions/solutions/) |
+| Enums | [src/enums/exercise.md](src/enums/exercise.md) | [src/enums/solutions/](src/enums/solutions/) |
+| Collections | [src/collections/exercise.md](src/collections/exercise.md) | [src/collections/solutions/](src/collections/solutions/) |
+| Generics | [src/generics/exercise.md](src/generics/exercise.md) | [src/generics/solutions/](src/generics/solutions/) |
+| Lambdas | [src/lambdas/exercise.md](src/lambdas/exercise.md) | [src/lambdas/solutions/](src/lambdas/solutions/) |
+| Streams | [src/streams/exercise.md](src/streams/exercise.md) | [src/streams/solutions/](src/streams/solutions/) |
+| Optional | [src/optional/exercise.md](src/optional/exercise.md) | [src/optional/solutions/](src/optional/solutions/) |
+| Date and Time | [src/datetime/exercise.md](src/datetime/exercise.md) | [src/datetime/solutions/](src/datetime/solutions/) |
+| I/O and File Handling | [src/io/exercise.md](src/io/exercise.md) | [src/io/solutions/](src/io/solutions/) |
 
 ---
 
@@ -138,8 +160,11 @@ Once you are comfortable with the mini projects and have covered JDBC, work thro
 ```
 java-for-everyone/
 ├── src/
-│   ├── introduction/       GUIDE.MD, var.md, strings-deep-dive.md, *.java
-│   ├── conditionals/       Conditionals.MD, Conditionals.java
+│   ├── introduction/       GUIDE.MD (index), datatypes.md, variables.md,
+│   │                       operators.md, casting.md, scanner.md, strings.md,
+│   │                       var.md, strings-deep-dive.md,
+│   │                       exercise.md, solutions/, *.java
+│   ├── conditionals/       Conditionals.MD, exercise.md, solutions/, *.java
 │   ├── loops/              Loops.md, exercise.md, solutions/
 │   ├── methods/            methods.md, exercise.md, *.java
 │   ├── arrays/             Arrays.md, exercise.md, solutions/

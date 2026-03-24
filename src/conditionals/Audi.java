@@ -1,4 +1,4 @@
-import methods.LearningMethods;
+package conditionals;
 
 import java.util.Scanner;
 

@@ -151,6 +151,71 @@ Then repeat with `"Enter two words separated by a space: "`. Read both words wit
 
 ---
 
+## Mini-Project 1: Unit Converter
+
+Build a console program that converts a single measurement into several other units simultaneously.
+
+**Requirements:**
+- Prompt the user to enter a distance in metres as a `double`. Print the equivalent value in kilometres, centimetres, millimetres, miles (`m / 1609.344`), feet (`m * 3.28084`), and inches (`m * 39.3701`).
+- Prompt the user to enter a temperature in Celsius as a `double`. Print the equivalent value in Fahrenheit (`F = (C * 9.0 / 5.0) + 32`) and Kelvin (`K = C + 273.15`).
+- Prompt the user to enter a mass in kilograms as a `double`. Print the equivalent in grams, pounds (`kg * 2.20462`), and ounces (`kg * 35.274`).
+- Format all output to three decimal places using `String.format("%.3f", value)`.
+- Organise the output into labelled sections using a header line for each measurement type.
+
+**Example output (for 1.5 m, 20 C, 2 kg):**
+```
+=== Distance ===
+Metres:      1.500
+Kilometres:  0.002
+Centimetres: 150.000
+Millimetres: 1500.000
+Miles:       0.001
+Feet:        4.921
+Inches:      59.055
+
+=== Temperature ===
+Celsius:     20.000
+Fahrenheit:  68.000
+Kelvin:      293.150
+
+=== Mass ===
+Kilograms:   2.000
+Grams:       2000.000
+Pounds:      4.409
+Ounces:      70.548
+```
+
+---
+
+## Mini-Project 2: Shopping Receipt Generator
+
+Build a console program that calculates a shopping receipt for three items.
+
+**Requirements:**
+- Prompt the user to enter the name and price of three items. Read each name with `nextLine()` and each price with `nextDouble()` (remember to consume the trailing newline after each `nextDouble()` before reading the next name).
+- Compute the subtotal (sum of the three prices), a tax amount at 8.5% of the subtotal, and the final total.
+- Print a formatted receipt that:
+  - Displays each item name left-aligned in a 20-character field and its price right-aligned to two decimal places using `String.format("%-20s $%6.2f", name, price)`.
+  - Displays the subtotal, tax, and total on separate labelled lines.
+  - Uses a border of `=` characters at the top and bottom and a `—` divider above the totals.
+
+**Example output:**
+```
+========================================
+           SHOPPING RECEIPT
+========================================
+Coffee Beans            $ 12.99
+Notebook                $  4.50
+USB Cable               $ 15.00
+----------------------------------------
+Subtotal:               $ 32.49
+Tax (8.5%):             $  2.76
+Total:                  $ 35.25
+========================================
+```
+
+---
+
 ## Common Mistakes
 
 ### Confusing integer division with floating-point division

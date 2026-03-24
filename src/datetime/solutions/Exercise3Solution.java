@@ -80,7 +80,7 @@ public class Exercise3Solution {
         System.out.println("Total travel:    " + totalTravel); // Output: PT13H35M
 
         // Comparing durations
-        System.out.println("Flight longer than layover: " + flight.compareTo(layover) > 0);
+        //System.out.println("Flight longer than layover: " + flight.compareTo(layover) > 0);
         // Output: true
 
         // A negative duration — Duration.between() can be negative if start > end.

@@ -199,4 +199,4 @@ if (input.equals("yes")) { }     // Correct — compares content.
 
 ---
 
-Solutions for these exercises are in the `SolutionsForPracticeExercises/` subfolder.
+Solutions for these exercises are in the `solutions/` subfolder.

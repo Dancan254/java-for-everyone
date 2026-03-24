@@ -1,4 +1,4 @@
-package conditionals.SolutionsForPracticeExercises;
+package conditionals.solutions;
 
 import java.util.Random;
 import java.util.Scanner;

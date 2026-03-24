@@ -1,3 +1,5 @@
+package io;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -19,11 +21,11 @@ import java.util.Scanner;
  */
 public class FileReadingDemo {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)throws IOException {
 
         // Create a temporary file with some sample content.
         // Path.of creates a Path object — it does NOT create the file yet.
-        Path tempFile = Path.of("demo-reading-temp.txt");
+        Path tempFile = Path.of("hi.txt");
 
         Files.writeString(tempFile,
                 "Java I/O Demo\n"
