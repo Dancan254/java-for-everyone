@@ -20,16 +20,16 @@ By the end of this section, you should be able to:
 
 | Topic | Description |
 |-------|-------------|
-| [Data Types](datatypes.md) | Java's 8 primitive types, reference types, memory model, and literal values |
+| [Data Types](datatypes/datatypes.md) | Java's 8 primitive types, reference types, memory model, and literal values |
 | [Variables](variables.md) | Declaration, initialization, naming conventions, constants, and `var` |
 | [Operators](operators.md) | Arithmetic, assignment, and increment/decrement operators with precedence rules |
-| [Type Casting](casting.md) | Widening and narrowing conversions, and String parsing methods |
-| [Scanner and User Input](scanner.md) | Reading keyboard input with the `Scanner` class |
-| [Strings](strings.md) | Concatenation, common methods, formatting, and comparison |
+| [Type Casting](datatypes/casting.md) | Widening and narrowing conversions, and String parsing methods |
+| [Scanner and User Input](scanner/scanner.md) | Reading keyboard input with the `Scanner` class |
+| [Strings](strings/strings.md) | Concatenation, common methods, formatting, and comparison |
 
 **Supplementary:**
 - [var.md](var.md) — full reference for the `var` keyword (Java 10+)
-- [strings-deep-dive.md](strings-deep-dive.md) — String pool, immutability, `StringBuilder`, and regex
+- [strings-deep-dive.md](strings/strings-deep-dive.md) — String pool, immutability, `StringBuilder`, and regex
 
 ---
 

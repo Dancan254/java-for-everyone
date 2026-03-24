@@ -152,4 +152,4 @@ Validate or sanitize String input before parsing.
 
 ## What's Next?
 
-**Next:** [Scanner and User Input](scanner.md)
+**Next:** [Scanner and User Input](../scanner/scanner.md)

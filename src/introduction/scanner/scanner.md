@@ -128,4 +128,4 @@ String name = scanner.nextLine(); // reads "Jane Doe" — correct
 
 ## What's Next?
 
-**Next:** [Strings](strings.md)
+**Next:** [Strings](../strings/strings.md)

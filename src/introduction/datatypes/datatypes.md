@@ -92,7 +92,7 @@ String empty   = "";    // empty string — not null
 String none    = null;  // holds no reference to any object
 ```
 
-See [strings.md](strings.md) for concatenation and the most useful String methods, and [strings-deep-dive.md](strings-deep-dive.md) for the String pool, immutability, and `StringBuilder`.
+See [strings.md](../strings/strings.md) for concatenation and the most useful String methods, and [strings-deep-dive.md](../strings/strings-deep-dive.md) for the String pool, immutability, and `StringBuilder`.
 
 ---
 
@@ -188,4 +188,4 @@ int truncated = (int) 3.14; // 3
 
 ## What's Next?
 
-**Next:** [Variables](variables.md)
+**Next:** [Variables](../variables.md)

@@ -150,4 +150,4 @@ if (x == 10) { }  // Correct
 
 ## What's Next?
 
-**Next:** [Type Casting](casting.md)
+**Next:** [Type Casting](datatypes/casting.md)

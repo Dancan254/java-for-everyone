@@ -128,6 +128,7 @@ if (input.equals("yes")) { }   // throws NullPointerException if input is null
 ## 5. Going Deeper
 
 [strings-deep-dive.md](strings-deep-dive.md) covers:
+
 - The String pool and `intern()`
 - Why immutability matters and how it affects performance
 - `StringBuilder` for efficient concatenation in loops
@@ -171,4 +172,4 @@ Use `StringBuilder.append()` inside loops instead. See [strings-deep-dive.md](st
 
 ## What's Next?
 
-**Next:** [Exercises](exercise.md)
+**Next:** [Exercises](../exercise.md)
