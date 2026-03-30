@@ -99,7 +99,7 @@ Work through the topics in the order listed below. Each entry links to the markd
 
 | # | Topic | Guide | Key Concepts |
 |---|-------|-------|--------------|
-| 26 | JDBC | [jdbc.md](src/jdbc/jdbc.md) | DriverManager, PreparedStatement, ResultSet, transactions, DAO pattern, connection pooling |
+| 26 | JDBC | [jdbc.md](src/jdbc/jdbc.md) · [exercises](src/jdbc/exercise.md) | DriverManager, PreparedStatement, ResultSet, transactions, DAO pattern, connection pooling |
 
 ### Tooling
 
