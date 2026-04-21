@@ -95,11 +95,17 @@ Work through the topics in the order listed below. Each entry links to the markd
 | The var Keyword | [var.md](src/introduction/var.md) | Local type inference, where var works, readability guidelines |
 | Strings: Deep Dive | [strings-deep-dive.md](src/introduction/strings-deep-dive.md) | String pool, StringBuilder, format specifiers, text blocks, regex |
 
+### Networking
+
+| # | Topic | Guide | Key Concepts |
+|---|-------|-------|--------------|
+| 26 | Networking | [networking.md](src/networking/networking.md) · [exercises](src/networking/exercise.md) | InetAddress, TCP sockets, ServerSocket, UDP datagrams, HttpClient, timeouts |
+
 ### Database
 
 | # | Topic | Guide | Key Concepts |
 |---|-------|-------|--------------|
-| 26 | JDBC | [jdbc.md](src/jdbc/jdbc.md) · [exercises](src/jdbc/exercise.md) | DriverManager, PreparedStatement, ResultSet, transactions, DAO pattern, connection pooling |
+| 27 | JDBC | [jdbc.md](src/jdbc/jdbc.md) · [exercises](src/jdbc/exercise.md) | DriverManager, PreparedStatement, ResultSet, transactions, DAO pattern, connection pooling |
 
 ### Tooling
 
@@ -142,6 +148,7 @@ Every topic has a dedicated exercise file with progressively challenging problem
 | Optional | [src/optional/exercise.md](src/optional/exercise.md) | [src/optional/solutions/](src/optional/solutions/) |
 | Date and Time | [src/datetime/exercise.md](src/datetime/exercise.md) | [src/datetime/solutions/](src/datetime/solutions/) |
 | I/O and File Handling | [src/io/exercise.md](src/io/exercise.md) | [src/io/solutions/](src/io/solutions/) |
+| Networking | [src/networking/exercise.md](src/networking/exercise.md) | [src/networking/solutions/](src/networking/solutions/) |
 
 ---
 
@@ -183,6 +190,8 @@ java-for-everyone/
 │   ├── optional/           optional.md, OptionalDemo.java
 │   ├── datetime/           datetime.md, DateTimeDemo.java
 │   ├── io/                 io.md, FileReadingDemo.java, FileWritingDemo.java
+│   ├── networking/         networking.md, TcpEchoServer.java, TcpEchoClient.java,
+│   │                       HttpClientDemo.java, exercise.md, solutions/
 │   ├── jdbc/               jdbc.md, DAO examples
 │   ├── tooling/            build-tools.md
 │   ├── bank/               bank mini project files
