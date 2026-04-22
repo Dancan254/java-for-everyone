@@ -202,6 +202,31 @@ java-for-everyone/
 
 ---
 
+## Additional Learning Resources
+
+The guides in this repository are designed to be self-contained, but pairing them with video instruction and structured courses will accelerate your understanding. The resources below are well-regarded and cover Java from beginner through professional level.
+
+### YouTube
+
+| Channel | Resource | Notes |
+|---------|----------|-------|
+| Amigoscode | [Java Roadmap](https://youtu.be/na3gWTOBJEE?si=19PXELtp36Nt5N9f) | A clear, opinionated learning path for Java developers |
+| Telusko | [Java Full Course](https://youtu.be/q6z_UCBM5Ek?si=qhuSzL4lsIDP9Yb6) | Comprehensive beginner-to-intermediate walkthrough |
+
+### Communities and Academies
+
+| Platform | Resource | Notes |
+|----------|----------|-------|
+| Amigoscode | [Amigoscode Academy](https://www.skool.com/amigoscode-academy) | Structured learning community with courses, Q&A, and mentorship |
+
+### Paid Courses
+
+| Platform | Course | Instructor | Notes |
+|----------|--------|------------|-------|
+| Udemy | [Java Masterclass](https://www.udemy.com/course/java-the-complete-java-developer-course/) | Tim Buchalka | One of the most comprehensive Java courses available; covers Java 17+ |
+
+---
+
 ## Contributing
 
 Contributions are welcome. To contribute:
@@ -239,3 +264,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 - **LinkedIn:** [Ian Dancan](https://www.linkedin.com/in/ian-dancan/)
 - **Twitter:** [@your\_javaguy](https://x.com/your_javaguy)
+- **Substack:** [yourjavaguy](https://substack.com/@yourjavaguy)
